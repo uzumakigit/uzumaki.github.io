@@ -4,12 +4,7 @@
     <title>Dashboard</title>
     <style>
         body {
-           <script>
-if (localStorage.getItem("isLoggedIn") !== "true") {
-    window.location.href = "login.html";
-}
-</script>
- margin: 0;
+            margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
@@ -69,6 +64,13 @@ if (localStorage.getItem("isLoggedIn") !== "true") {
 </head>
 <body>
 
+<!-- 🔒 LOGIN PROTECTION -->
+<script>
+if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html";
+}
+</script>
+
     <div class="navbar">
         <h2>My Dashboard</h2>
         <button class="logout-btn" onclick="logout()">Logout</button>
@@ -98,6 +100,7 @@ if (localStorage.getItem("isLoggedIn") !== "true") {
 
 <script>
 function logout() {
+    localStorage.removeItem("isLoggedIn");
     window.location.href = "login.html";
 }
 </script>
