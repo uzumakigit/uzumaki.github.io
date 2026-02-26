@@ -103,6 +103,20 @@
             Don't have an account? <a href="#">Sign Up</a>
         </div>
     </div>
+<script>
+function loginUser() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  if (username === "admin" && password === "1234") {
+    window.location.href = "dashboard.html";
+    return false;
+  } else {
+    alert("Wrong username or password");
+    return false;
+  }
+}
+</script>
 
 </body>
 </html>
