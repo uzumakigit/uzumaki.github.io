@@ -4,7 +4,12 @@
     <title>Dashboard</title>
     <style>
         body {
-            margin: 0;
+           <script>
+if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html";
+}
+</script>
+ margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
